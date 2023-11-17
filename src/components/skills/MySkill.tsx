@@ -5,11 +5,14 @@ type StyledMySkillPropsType = {
     textSkill: string
     textPercentSkill:string
 }
+type PercentSkillPropsType = {
+    width?: string
+}
 
 export const MySkill = (props: StyledMySkillPropsType) => {
     return (
         <StyledMySkill>
-            <PercentSkill>
+            <PercentSkill width={props.textPercentSkill}>
                 <TextSkill>
                     {props.textSkill}
                 </TextSkill>
@@ -26,14 +29,18 @@ const StyledMySkill = styled.div `
   border-bottom: 4px solid #F0F0F0;
   margin-left: 55px;
 `
-const PercentSkill = styled.div `
-  width: calc(531px - );
+const PercentSkill = styled.div<PercentSkillPropsType> `
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   border-bottom: 4px solid #282828;
   position: relative;
   top: 4px;
-  padding-bottom: 11px;
+  padding-bottom: 10px;
+  width: ${props=> props.width || '0%'};
 `
 const TextSkill = styled.span `
+  display: block;
   color: #111;
   font-family: Manrope;
   font-size: 19px;
@@ -44,6 +51,7 @@ const TextSkill = styled.span `
   text-transform: capitalize;
 `
 const TextPercentSkill = styled.span `
+  display: block;
   color: #111;
   font-family: Manrope;
   font-size: 19px;

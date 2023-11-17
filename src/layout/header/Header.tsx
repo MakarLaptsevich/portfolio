@@ -16,5 +16,8 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-  
+  :active {
+    transform: translateY(300px);
+    z-index: 999999;
+  }
 `

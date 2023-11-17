@@ -18,5 +18,5 @@ const StyledLogo = styled.div`
   right: 250px;
   top: 10px;
   z-index: 9999;
-  
+  :
 `

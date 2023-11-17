@@ -37,13 +37,13 @@ const Photo = styled.img`
 
 const StyledMain = styled.section`
   min-height: 936px;
-  background-color: blueviolet;
+  background-image: radial-gradient(#8f7d7d, #c2c2e0);
 `
 const Content = styled.div `
   padding-right: 30px;
 `
 const Welcome = styled.span `
-  color: #717171;
+  color: black;
   font-family: Inconsolata;
   font-size: 18px;
   font-style: normal;
@@ -76,7 +76,6 @@ const ImDoing = styled.h1 `
 const BtnGetIn = styled.button `
   margin-top: 75px;
   border-radius: 40px;
-  border: 2px solid #E2E2E2;
   width: 251px;
   height: 62px;
   background-color: black;
@@ -89,4 +88,9 @@ const BtnGetIn = styled.button `
   line-height: 234.523%; /* 37.524px */
   letter-spacing: 1.6px;
   text-transform: uppercase;
+  cursor: pointer;
+  :active {
+    transform: scale(1.5);
+    cursor: grabbing;
+  }
 `

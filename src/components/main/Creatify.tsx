@@ -12,6 +12,7 @@ export const Creatify = () => {
 
 const StyledCreatify = styled.div `
   margin-bottom: 140px;
+  position: relative;
 `
 const Text = styled.h3 `
   color: #111;
@@ -24,8 +25,8 @@ const Text = styled.h3 `
 `
 const CText = styled.h3 `
   position: absolute;
-  left: 153px;
-  bottom: 555px;
+  right: 516px;
+  bottom: -10px;
   color: #E6E6E6;
   font-family: Manrope;
   font-size: 51.53px;
